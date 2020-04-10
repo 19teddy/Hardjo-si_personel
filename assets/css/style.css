@@ -1,0 +1,55 @@
+.title-text {
+	position: relative;
+	top: 30px;
+	font-family: 'Lato', sans-serif;
+	padding: 0px 10px 0px 15px;
+}
+
+#table_wrapper .toolbar-bottom {
+	margin-top: 5px;
+}
+
+td.details-control {
+	text-align: center;
+  cursor: pointer;
+}
+
+.edit-table tbody td {
+	padding: 0 !important;
+}
+
+.edit-table tbody td.buttons {
+	padding: 0px 8px !important;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.edit-table tbody td input,
+.edit-table tbody td select {
+	border: solid 1px transparent;
+}
+
+.edit-table tbody td input:focus:hover,
+.edit-table tbody td input:focus,
+.edit-table tbody td select:focus:hover,
+.edit-table tbody td select:focus {
+	border: solid 1px blue;
+}
+
+.edit-table tbody td input:hover, 
+.edit-table tbody td select:hover {
+	background: #f5f5f5;
+}
+
+table.detail-table {
+	border-collapse: collapse;
+	border: none;
+}
+
+table.detail-table td {
+	padding: 3px 10px;
+}
+
+table.detail-table tr td:first-child {
+	font-weight: bold;
+}
