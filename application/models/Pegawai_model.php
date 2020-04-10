@@ -636,10 +636,10 @@ class Pegawai_model extends BaseModel {
 		else if(!empty($fields['riwayat_jabatan'])) {
 			$this->db->where('id_pegawai', $id_pegawai)->delete('riwayat_jabatan');
 			$sql = "INSERT INTO riwayat_jabatan (id_pegawai, id_jabatan, id_status_jabatan, tmt, tanggal_keputusan, satuan, no_keputusan) VALUES ";
-			foreach ($fields['riwayat_jabatan']['id_jabatan'] as $key => $value) {
+			foreach ($fields['riwayat_jabatan']['jabatan'] as $key => $value) {
 				$sql .= $this->db->compile_binds('(?,?,?,?,?,?,?),', [
 					$id_pegawai,
-					$this->m_jabatan->insert_if_not_exist($fields['riwayat_jabatan']['id_jabatan'][$key]),
+					$this->m_jabatan->insert_if_not_exist($fields['riwayat_jabatan']['jabatan'][$key]),
 					$fields['riwayat_jabatan']['id_status_jabatan'][$key],
 					change_format($fields['riwayat_jabatan']['tmt'][$key], 'Y-m-d'),
 					change_format($fields['riwayat_jabatan']['tanggal_keputusan'][$key], 'Y-m-d'),

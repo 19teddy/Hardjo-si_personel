@@ -32,9 +32,11 @@
         <tbody>
           <?php if($is_edit && !empty($form_data->riwayat_jabatan)): ?>
             <?php foreach($form_data->riwayat_jabatan as $item): ?>
+              <?php //echo '<pre>'; print_r($form_data->riwayat_jabatan); die(); ?>
               <tr>
                 <td>
-                  <input type="text" class="form-control" name="riwayat_jabatan[id_jabatan][]" value="<?= $item['id_jabatan'] ?>" required="required">
+                  <!-- <input type="hidden" class="form-control" name="riwayat_jabatan[id_jabatan][]" value="<?= $item['id_jabatan'] ?>" required="required"> -->
+                  <input type="text" class="form-control" name="riwayat_jabatan[jabatan][]" value="<?= $item['jabatan'] ?>" required="required">
                 </td>
                 <td>
                   <input type="text" class="form-control" name="riwayat_jabatan[no_keputusan][]" value="<?= $item['no_keputusan'] ?>" >
@@ -89,7 +91,8 @@
 <template id="row-jabatan">
 	<tr>
 		<td>
-			<input type="text" class="form-control" name="riwayat_jabatan[id_jabatan][]" required="required">
+			<!-- <input type="hidden" class="form-control" name="riwayat_jabatan[id_jabatan][]" required="required"> -->
+			<input type="text" class="form-control" name="riwayat_jabatan[jabatan][]" required="required">
 		</td>
 		<td>
 			<input type="text" class="form-control" name="riwayat_jabatan[no_keputusan][]" required="required">

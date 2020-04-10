@@ -504,8 +504,7 @@ class Personil extends MY_Controller {
 		}
 
 		$data = $this->pegawai_model->get_one($id_pegawai);
-		// echo "<pre>";
-		// print_r($data);exit();
+
 		
 		$this->renderer->data('form_data', $data);
 
@@ -791,7 +790,7 @@ class Personil extends MY_Controller {
 		->value();
 		$this->save_input($form_data);
 		// echo "<pre>";
-		// var_dump($form_data);exit();
+		// print_r($form_data);exit();
 		$query_result = $this->pegawai_model->update_riwayat_jabatan($id_pegawai, $form_data);
 		if($query_result !== FALSE) {
 			$this->set_alert(
